@@ -1,0 +1,172 @@
+body{
+    background-image: url("ai.png");
+    background-size: cover;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-size: 100%;
+}
+.navbar-default {
+    background-color: #58A5FD;
+    background-image: none;
+    background-repeat: no-repeat;
+    margin-bottom:50px;
+}
+   
+.nav.navbar-nav li a {
+    color: white;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a,.navbar-default .navbar-nav .open .dropdown-menu {
+    background-color: white;
+    color:black;
+    
+}
+.navbar-default .navbar-brand {
+    font-size:22pt;
+    font-style: oblique;
+    color: white;
+}
+.banner{
+    background: rgba(60, 60, 60, 0.8);
+    height: 400px;
+    max-width: 700px;
+    margin: 40px auto 40px auto;
+    border-radius: 25px;
+    flex-direction: column;
+    display: flex;
+}
+
+.bannerS{
+    background: rgba(60, 60, 60, 0.8);
+    height: 250px;
+    max-width: 700px;
+    margin: 40px auto 40px auto;
+    border-radius: 25px;
+    flex-direction: column;
+    display: flex;
+}
+
+.bannerXL{
+    background: rgba(60, 60, 60, 0.8);
+    height: 800px;
+    max-width: 700px;
+    margin: 40px auto 40px auto;
+    border-radius: 25px;
+    flex-direction: column;
+    display: flex;
+}
+
+.bannerXXL{
+    background: rgba(60, 60, 60, 0.8);
+    height: 100%;
+    max-width: 700px;
+    margin: 40px auto 40px auto;
+    border-radius: 25px;
+    flex-direction: column;
+    display: flex;
+    padding-left: 10px;
+}
+
+.bannerW{
+    background: rgba(60, 60, 60, 0.8);
+    height: 650px;
+    max-width: 850px;
+    margin: 40px auto 40px auto;
+    border-radius: 25px;
+    flex-direction: column;
+    display: flex;
+    
+
+}
+
+#in{
+    text-align: center;
+    color:white;
+    font-size: 25px;
+    margin: auto;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top: 20pt;
+    padding-bottom:20pt; 
+}
+
+#wLocRef2{
+    font-size: 15pt;
+    word-break:break-all;
+}
+#name{
+    text-align: center;
+    color:white;
+    font-size: 35px;
+    margin: auto;
+}
+.centered{
+    text-align: center;
+    color:white;
+    font-size: 20px;
+    margin: auto;
+    padding-left:10px;
+    padding-right:10px;
+}
+#searchBox{
+    color:black;
+    font-size:20pt;
+    width:400px;
+}
+
+#myButton{
+    color:white;
+    background-color: #62ea60;
+    border-radius: 10px;
+    font-size: 25pt;
+}
+
+.title{
+    color: blue;
+    text-align: left;
+    font-size: 20pt;
+    padding-left:10pt;
+    padding-right:10pt;
+}
+
+.url{
+    color:green;
+    text-align: left;
+    text-decoration: underline;
+    font-size: 12pt;
+    padding-left:10pt;
+    padding-right:10pt;
+}
+.desc{
+    color:white;
+    text-align: left;
+    font-size: 12pt;
+    padding-left:10pt;
+    padding-right:10pt;
+   
+}
+
+#in{
+    text-align: center;
+    color:white;
+    font-size: 25px;
+    margin: auto;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top: 20pt;
+    padding-bottom:20pt; 
+}
+
+#upload{
+    justify-content: center;
+   padding-left: 20px;
+   padding-right: 20px;
+   font-size: 20px;
+}
+
+#fileinput{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 150px;
+}
+
+

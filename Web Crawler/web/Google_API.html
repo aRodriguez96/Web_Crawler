@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Google API</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../web/search.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">CS355</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Course<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://learn.zybooks.com/zybook/CUNYCSCI355TeitelmanSpring2019">Zybook</a>
+                            </li>
+                            <li><a href="http://mhhe.com/engcs/compsci/forouzan/">Textbook</a></li>
+                            <li><a href="https://tinyurl.com/csci355-drive">Class Notes</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Search<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="fixed-list.html">Fixed-List</a></li>
+                            <li><a href="from-file.html">From File</a></li>
+                            <li><a href="Google_API.html">Google API</a></li>
+                            <li><a href="my-search.php">My Search</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Browser<span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="window.html">Window</a></li>
+                            <li><a href="screen.html">Screen</a></li>
+                            <li><a href="location.html">Location</a></li>
+                            <li><a href="navigation.html">Navigation</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">About<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="yassine.html">Yassine</a></li>
+                            <li><a href="albert.html">Albert</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div>
+            <script type="text/javascript">
+                window.onload = function () {
+                    var search = new GoogleCustomSearch({
+                        // take it from here https://code.google.com/apis/console/
+                        googleApiKey: 'AIzaSyDazW-TT9T_-VMsN5R731fKTmnxlqv4SCA',
+                        // http://www.google.com/cse/
+                        googleCustomSearchId: '012287233284611837744:zljrwahbeyc',
+
+                        // callback
+                        onProcessResults: function (results) {
+                            var that = this,
+                                i, len,
+                                item, resultsStr = '';
+                            if (that.hasError) {
+                                alert(that.error.message);
+                            }
+
+
+
+                            else if (results.items.length > 0) {
+
+                            
+
+                                for (i = 0, len = results.items.length; i < len; i++) {
+                                    item = results.items[i];
+                                    /*
+                                    //Title
+                                    //resultsStr += '<result class="result">'
+                                    resultsStr += '<p id="title"> <a href="' + item.link + '" target="_blank">'
+                                        + item.htmlTitle + '</a></p>';
+                                    resultsStr += '<br>'   
+                                 
+
+                                    // URL
+
+                                   
+                                    resultsStr +='<p id="url"><a href="' + item.link + '" target="_blank"'
+                                        + item.link + '</a>';
+                                    resultsStr += '<br>';
+                                   
+
+
+                                    //Description 
+                                
+                                    resultsStr += '<p id="desc">' + item.htmlSnippet;
+                                    
+                                    resultsStr += '</p>';
+                                   //resultsStr += '</result>'
+                                   */
+                                       /*
+                                       <div class = "result">
+                                                <label>
+                                            <input type="checkbox" class="box">
+                                            <span class="title">Sarah Sanders - Wikipedia</span>
+                                        </label>
+                                        <br>
+                                        <a href="https://en.wikipedia.org/wiki/Sarah_Sanders" class="url">https://en.wikipedia.org/wiki/Sarah_Sanders</a>
+                                        <p class="desc">Sarah Elizabeth Huckabee Sanders (born August 13, 1982) is an American campaign manager .... Sanders is the third woman to hold the role of White House Press Secretary after Dee Dee Myers in 1993 and Dana Perino in 2007. In August ...</p>
+                                    </div>
+                                       */ 
+
+                                    //resultsStr += '</div>'
+                                   
+                                    resultsStr += '<div class="result">';
+                                        resultsStr += '<input type="checkbox" class="checkbox">';
+                                        
+                                    resultsStr += '<a href="' + item.link + '" target="_blank" class="title">'
+                                        + item.htmlTitle + '</a>';
+                                   
+                                    
+                                    resultsStr += '<br><a href="' + item.link + '" target="_blank" class="url">'
+                                        + item.link + '</a>';
+                                    
+
+                                    resultsStr += '<br>';
+                                    
+                                    resultsStr += '<p class="desc">' + item.htmlSnippet;
+                                    
+
+                                    resultsStr += '</p>';
+                                    resultsStr += '</div>';
+                                }
+
+                                
+                                document.getElementById('search-results').innerHTML = resultsStr;
+                            }
+                        }
+                    });
+                    // form handler
+                    document.getElementById('search-form').onsubmit = function () {
+                        var searchInput = document.getElementById('search-query');
+                        if (searchInput.value.length > 2 && !search.isBusy) {
+                            document.getElementById('search-results').innerHTML = 'loading...';
+                            search.doSearch(searchInput.value);
+                        }
+                        return false;
+                    }
+                }
+
+
+            </script>
+        </div>
+
+    </header>
+    <form id="export">
+            <label for="fileType">Choose Export Format</label>
+            <select name="fileType" id="fileType">
+              <option value="CSV">CSV</option>
+              <option value="JSON">JSON</option>
+              <option value="XML">XML</option>
+            </select>
+            <input type="button" id="download" value='Download' class="btn btn-primary" onclick="down();">
+          </form>
+    <div class="bannerXXL">
+        <div class="centered">
+            <h1>Google Search</h1>
+        </div>
+        <div class="centered">
+            <form id="search-form" action="">
+                <input type="text" style="color: #000000;" id="search-query">
+                <input type="submit" value="Search" id="myButton">
+            </form>
+            <input type="checkbox" id="select_all" /><p>Select/Deselect All</p>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#select_all').on('click',function(){
+                    if(this.checked){
+                        $('.checkbox').each(function(){
+                            this.checked = true;
+                        });
+                    }else{
+                         $('.checkbox').each(function(){
+                            this.checked = false;
+                        });
+                    }
+                });
+                
+                $('.checkbox').on('click',function(){
+                    if($('.checkbox:checked').length == $('.checkbox').length){
+                        $('#select_all').prop('checked',true);
+                    }else{
+                        $('#select_all').prop('checked',false);
+                    }
+                });
+            });
+            </script>
+        </div>
+
+        
+        <div id="search-results"></div>
+        
+
+    </div>
+
+
+</body>
+
+
+</html>
