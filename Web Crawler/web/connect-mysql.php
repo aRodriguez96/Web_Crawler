@@ -1,9 +1,9 @@
 <?php
 
-DEFINE ('DB_USER', 'roal9338');
-DEFINE ('DB_PSWD', '23299338');
-DEFINE ('DB_HOST', '149.4.211.180');
-DEFINE ('DB_NAME', 'roal9338');
+DEFINE ('DB_USER', 'username');
+DEFINE ('DB_PSWD', 'password');
+DEFINE ('DB_HOST', 'ip');
+DEFINE ('DB_NAME', 'name');
 
 
 $dbcon = mysqli_connect(DB_HOST, DB_USER, DB_PSWD, DB_NAME);
