@@ -182,6 +182,16 @@
         echo "<br>";
         echo "<br>";
         echo $pageId;
+        
+        /*
+        Query to search database for specific words:
+        SELECT *
+        FROM page, word, page_word
+        WHERE page.pageId = page_word.pageId
+        AND word.wordId = page_word.wordId
+        AND word.wordName = wordEntered
+        ORDER BY freq
+        */
     ?>
 
     </div>
